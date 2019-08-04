@@ -7,7 +7,7 @@
 // Extend your own GameInfo from this but feel free to change this class itself
 // to extend from something else than UDKGame.
 //=============================================================================
-class GUICompatibleGameInfo extends UDKGame;
+class GUICompatibleGameInfo extends KFGameInfo;
 
 DefaultProperties
 {

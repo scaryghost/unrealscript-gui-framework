@@ -6,7 +6,7 @@
 // Receives mouse movement and translates it to coordinates. Draws GUIComponents
 // to allow the creation of a menu.
 //=============================================================================
-class GUICompatibleHUD extends UTHUDBase;
+class GUICompatibleHUD extends KFHUDBase;
 
 var(HUD) Font PlayerFont; // General purpose font used by the game.
 var(HUD) editinline GUIMenuScene MenuScene; // Handles buttons and similar.
@@ -17,7 +17,7 @@ simulated event PostBeginPlay()
 {
     RemoveMovies(); // Die, bitches!!!
 
-    super(UDKHUD).PostBeginPlay();
+    super.PostBeginPlay();
 
     if (MenuScene == None)
     {
@@ -111,13 +111,13 @@ function CheckViewPortAspectRatio()
 
     if ( bIsWideScreen ) // Otherwise these are checked against 1024x768 by default.
     {
-        RatioX = (ViewX != 0 ? float(ViewX) : Canvas.ClipX) / 1280.f;
-        RatioY = (ViewY != 0 ? float(ViewY) : Canvas.ClipY) / 720.f;
+        RatioX = Canvas.ClipX / 1280.f;
+        RatioY =  Canvas.ClipY / 720.f;
     }
     else
     {
-        RatioX = (ViewX != 0 ? float(ViewX) : Canvas.ClipX) / 1024.f;
-        RatioY = (ViewY != 0 ? float(ViewY) : Canvas.ClipY) / 768.f;
+        RatioX = Canvas.ClipX / 1024.f;
+        RatioY = Canvas.ClipY / 768.f;
     }
 }
 
