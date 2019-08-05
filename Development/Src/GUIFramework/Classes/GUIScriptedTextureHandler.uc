@@ -109,7 +109,7 @@ defaultproperties
    ClearColor=(R=0.0,G=0.0,B=0.0,A=0.0)
 
    Begin Object class=StaticMeshComponent Name=StaticMeshComp1
-      StaticMesh=StaticMesh'dwStaticMeshes.Plane'
+      StaticMesh=StaticMesh'VFX_MESH_THREE.FX_Poly_Plane_mesh'
    End Object
 
    Mesh = StaticMeshComp1
